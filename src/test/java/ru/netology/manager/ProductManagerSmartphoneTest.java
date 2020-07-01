@@ -54,6 +54,16 @@ class ProductManagerSmartphoneTest {
     }
 
     @Test
+    void searchPhoneIfRemoved() {
+        manager.removeById(6);
+
+        Product[] actual = manager.searchBy("iPhone");
+        Product[] expected = {};
+
+        assertArrayEquals(expected,actual);
+    }
+
+    @Test
     void searchPhoneIfNotExist() {
 
         Product[] actual = manager.searchBy("Huawei");
