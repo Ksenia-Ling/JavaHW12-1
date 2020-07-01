@@ -54,6 +54,16 @@ class ProductManagerBookTest {
     }
 
     @Test
+    void searchPhoneIfRemoved() {
+        manager.removeById(1);
+
+        Product[] actual = manager.searchBy("Говард Лавкрафт");
+        Product[] expected = {};
+
+        assertArrayEquals(expected,actual);
+    }
+
+    @Test
     void searchBookIfNotExist() {
 
         Product[] actual = manager.searchBy("Над пропастью во ржи");
