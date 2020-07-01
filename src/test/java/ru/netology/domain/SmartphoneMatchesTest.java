@@ -12,7 +12,6 @@ class SmartphoneMatchesTest {
     @Test
     void SmartphoneMatchesByName() {
         String text = "Redmi Note";
-        xiaomi.matches(text);
 
         assertTrue(xiaomi.matches(text));
     }
@@ -20,7 +19,6 @@ class SmartphoneMatchesTest {
     @Test
     void SmartphoneMatchesByProducer() {
         String text = "Samsung";
-        samsung.matches(text);
 
         assertTrue(samsung.matches(text));
     }
@@ -28,7 +26,6 @@ class SmartphoneMatchesTest {
     @Test
     void SmartphoneMatchesIfFalse() {
         String text = "A71";
-        samsung.matches(text);
 
         assertFalse(samsung.matches(text));
     }

@@ -14,7 +14,6 @@ class BookMatchesTest {
     @Test
     void bookMatchesByName() {
         String text = "рука";
-        theLeftHandOfDarkness.matches(text);
 
         assertTrue(theLeftHandOfDarkness.matches(text));
 
@@ -23,7 +22,6 @@ class BookMatchesTest {
     @Test
     void bookMatchesByAuthor() {
         String text = "Урсула";
-        theLeftHandOfDarkness.matches(text);
 
         assertTrue(theLeftHandOfDarkness.matches(text));
     }
@@ -31,7 +29,6 @@ class BookMatchesTest {
     @Test
     void BookMatchesIfFalse() {
         String text = "Джоан Роулинг";
-        callOfCthulhu.matches(text);
 
         assertFalse(callOfCthulhu.matches(text));
     }
